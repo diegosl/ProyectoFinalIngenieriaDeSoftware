@@ -35,6 +35,7 @@ public class VistaLogueo implements VistaInterface
 		//CREA MARCO DE VENTANA DE LOGUEO
 		marcoLogueo = new JFrame();
 		marcoLogueo.setBackground(Color.WHITE);
+		marcoLogueo.setTitle("VENTANA LOGUEO");
 		marcoLogueo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		marcoLogueo.setBounds(100, 100, 320, 180);
 		marcoLogueo.setVisible(true);
@@ -86,7 +87,7 @@ public class VistaLogueo implements VistaInterface
 		botonSalir.setBounds(150, 103, 130, 28);
 		panelLogueo.add(botonSalir);
 		
-		//ESPERA DE EVENTO
+		//ESPERA DE EVENTO USUARIO
 		evento();
 	}
 	
@@ -118,23 +119,31 @@ public class VistaLogueo implements VistaInterface
 		
 		switch(modelo.getEstadoLogueo())
 		{
-			case 0:
-			{
-				//INICIA SESION DE VENTANA DE LOGUEO
-				marcoLogueo.setVisible(false);
-				System.out.println("IS");
-				break;
-			}
 			case 1:
 			{
-				//NO INICIA SESION DE VENTANA DE LOGUEO
-				System.out.println("Ya existe el usuario");
+				//INICIA SESION DE VENTANA DE LOGUEO
+				//NO MUESTRA VENTANA DE LOGUEO
+				marcoLogueo.setVisible(false);
 				break;
 			}
 			case 2:
 			{
+				//NO INICIA SESION DE VENTANA DE LOGUEO
+				//SE TIENE QUE VOLVER A INGRESAR USUARIO
+				System.out.println("Ya existe el usuario");
+				break;
+			}
+			case 3:
+			{
 				//SALE DE VENTANA DE LOGUEO
 				System.exit(0);
+				break;
+			}
+			case 4:
+			{
+				//INICIA SESION DE VENTANA DE LOGUEO
+				//MUESTRA VENTANA DE LOGUEO
+				marcoLogueo.setVisible(true);
 				break;
 			}
 		}

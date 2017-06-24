@@ -5,6 +5,15 @@ public interface ModeloInterface
 	void removerObservador(ObservadorInterface o);
 	void notificarObservador();
 	void inicioLogueo(String nombre);
-	int getEstadoLogueo();
 	void finLogueo();
+	void inicioJuego();
+	void finJuego();
+	void secuenciaJuego(String boton, int valor);
+	int getEstadoLogueo();
+	int getEstadoJuego();
+	int getEstadoPuntuacion();
+	int getReinicioTiempo();
+	int getColor();
+	int getTecla();
+	int[] getVector();
 }
