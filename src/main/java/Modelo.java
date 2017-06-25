@@ -131,15 +131,6 @@ public class Modelo implements ModeloInterface
 	{
 		estadoJuego = 3;
 		
-		/*for(int i=0; i<listaUsuario.size(); i++)
-		{
-			System.out.println("Usuario: "+listaUsuario.get(i).getNombre()+
-					           ", Aciertos: "+listaUsuario.get(i).getAcierto()+
-					           ", Desaciertos: "+listaUsuario.get(i).getDesacierot()+
-					           ", Puntuacion Max: "+listaUsuario.get(i).getPuntuacion());
-		}
-		*/
-		
 		notificarObservador();
 	}
 	
@@ -222,6 +213,33 @@ public class Modelo implements ModeloInterface
 		}
 	}
 	
+	public void finTiempo()
+	{
+		estadoJuego = 2;
+		estadoPuntuacion = 2;
+		
+		listaUsuario.get(listaUsuario.size()-1).setAcierto(acierto);
+		listaUsuario.get(listaUsuario.size()-1).setDesacierto(desacierto);
+		listaUsuario.get(listaUsuario.size()-1).setPuntuacion(puntuacion);
+		
+		notificarObservador();
+	}
+	
+	public void inicioPuntuacion()
+	{
+		estadoPuntuacion = 1;
+		estadoLogueo = 4;
+		
+		notificarObservador();
+	}
+	
+	public void finPuntuacion()
+	{
+		estadoPuntuacion = 3;
+		
+		notificarObservador();
+	}
+	
 	public int getEstadoLogueo()
 	{
 		return estadoLogueo;
@@ -255,5 +273,10 @@ public class Modelo implements ModeloInterface
 	public int[] getVector()
 	{
 		return vector;
+	}
+	
+	public ArrayList getListaUsuario()
+	{
+		return listaUsuario;
 	}
 }

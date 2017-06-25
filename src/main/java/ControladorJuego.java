@@ -35,4 +35,19 @@ public class ControladorJuego implements ControladorInterface
 	{
 		modelo.secuenciaJuego(boton, valor);
 	}
+	
+	public void tiempoLimite()
+	{
+		modelo.finTiempo();
+	}
+	
+	public void iniciarPuntuacion()
+	{
+		//CONTROLADOR DE PUNTUACION
+	}
+	
+	public void salirPuntuacion()
+	{
+		//CONTROLADOR DE PUNTUACION
+	}
 }

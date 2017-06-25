@@ -6,6 +6,6 @@ public class Main
 		Modelo modelo = new Modelo();
 		ControladorLogueo controladorLogueo = new ControladorLogueo(modelo);
 		ControladorJuego controladorJuego = new ControladorJuego(modelo);
-		//ControladorPuntuacion controladorPuntuacion = new ControladorPuntuacion(modelo);
+		ControladorPuntuacion controladorPuntuacion = new ControladorPuntuacion(modelo);
 	}
 }

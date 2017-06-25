@@ -6,4 +6,7 @@ public interface ControladorInterface
 	void iniciarJuego();
 	void salirJuego();
 	void logicaJuego(String boton, int valor);
+	void tiempoLimite();
+	void iniciarPuntuacion();
+	void salirPuntuacion();
 }

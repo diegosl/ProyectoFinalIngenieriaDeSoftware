@@ -1,24 +1,24 @@
 
-public class ControladorLogueo implements ControladorInterface 
+public class ControladorPuntuacion implements ControladorInterface
 {
 	private ModeloInterface modelo;
-	private VistaInterface vistaLogueo;
+	private VistaInterface vistaPuntuacion;
 	
-	public ControladorLogueo(ModeloInterface modelo)
+	public ControladorPuntuacion(ModeloInterface modelo)
 	{
 		this.modelo = modelo;
-		vistaLogueo = new VistaLogueo(this, modelo);
-		vistaLogueo.crearVista();
+		vistaPuntuacion = new VistaPuntuacion(this, modelo);
+		vistaPuntuacion.crearVista();
 	}
 	
 	public void iniciarLogueo(String nombre)
 	{
-		modelo.inicioLogueo(nombre);
+		//CONTROLADOR DE LOGUEO
 	}
 	
 	public void salirLogueo()
 	{
-		modelo.finLogueo();
+		//CONTROLADOR DE LOGUEO
 	}
 	
 	public void iniciarJuego()
@@ -43,11 +43,11 @@ public class ControladorLogueo implements ControladorInterface
 	
 	public void iniciarPuntuacion()
 	{
-		//CONTROLADOR DE PUNTUACION
+		modelo.inicioPuntuacion();
 	}
 	
 	public void salirPuntuacion()
 	{
-		//CONTROLADOR DE PUNTUACION
+		modelo.finPuntuacion();
 	}
 }

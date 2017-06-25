@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public interface ModeloInterface 
 {
@@ -9,6 +10,9 @@ public interface ModeloInterface
 	void inicioJuego();
 	void finJuego();
 	void secuenciaJuego(String boton, int valor);
+	void finTiempo();
+	void inicioPuntuacion();
+	void finPuntuacion();
 	int getEstadoLogueo();
 	int getEstadoJuego();
 	int getEstadoPuntuacion();
@@ -16,4 +20,5 @@ public interface ModeloInterface
 	int getColor();
 	int getTecla();
 	int[] getVector();
+	ArrayList getListaUsuario();
 }

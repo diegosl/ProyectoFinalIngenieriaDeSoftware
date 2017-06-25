@@ -44,7 +44,7 @@ public class Usuario
 		return acierto;
 	}
 	
-	public int getDesacierot()
+	public int getDesacierto()
 	{
 		return desacierto;
 	}

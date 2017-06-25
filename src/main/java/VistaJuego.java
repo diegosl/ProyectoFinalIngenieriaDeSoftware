@@ -67,6 +67,9 @@ public class VistaJuego implements VistaInterface
 		//CREA INSTANCIA TIEMPO DEL JUEGO
 		tiempo = TiempoJuego.Instancia();
 		panelJuego.add(tiempo.Barra());
+		tiempo.setControlador(controlador);
+		tiempo.setModelo(modelo);
+		tiempo.start();
 		
 		//CREA BOTON INICIAR DE VENTANA DE JUEGO
 		botonIniciar = new JButton("Iniciar");
@@ -396,6 +399,7 @@ public class VistaJuego implements VistaInterface
 					}
 				}
 				
+				//SE INICIA NUEVAMENTE LA BARRA DE TIEMPO
 				if(modelo.getReinicioTiempo() == 0)
 				{
 					tiempo.Reset(1);
@@ -413,10 +417,6 @@ public class VistaJuego implements VistaInterface
 			{
 				//SALE DE VENTANA DE JUEGO
 				System.exit(0);
-				break;
-			}
-			case 4:
-			{
 				break;
 			}
 		}
