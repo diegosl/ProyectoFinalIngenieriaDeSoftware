@@ -40,5 +40,5 @@ public class TestColor
 		
 		assertEquals(color,1);
 	}
-
+	
 }
