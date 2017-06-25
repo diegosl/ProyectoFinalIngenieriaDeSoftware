@@ -46,11 +46,13 @@ public class Modelo implements ModeloInterface
 		tiempo = 0;
 	}
 	
+	//REGISTRA A OBSERVADOR
 	public void registrarObservador(ObservadorInterface o)
 	{
 		listaObservador.add(o);
 	}
 	
+	//REMUEVE A OBSERVADOR
 	public void removerObservador(ObservadorInterface o)
 	{
 		int i = listaObservador.indexOf(o);
@@ -61,6 +63,7 @@ public class Modelo implements ModeloInterface
 		}
 	}
 	
+	//NOTIFICA A TODOS LOS OBSERVADORES
 	public void notificarObservador()
 	{
 		for(int i=0; i<listaObservador.size(); i++)
@@ -120,6 +123,7 @@ public class Modelo implements ModeloInterface
 		estadoJuego = 2;
 		estadoLogueo = 4;
 		
+		//SE COPIAN TODOS LOS DATOS OBTENIDOS A USUARIO
 		listaUsuario.get(listaUsuario.size()-1).setAcierto(acierto);
 		listaUsuario.get(listaUsuario.size()-1).setDesacierto(desacierto);
 		listaUsuario.get(listaUsuario.size()-1).setPuntuacion(puntuacion);
@@ -218,6 +222,7 @@ public class Modelo implements ModeloInterface
 		estadoJuego = 2;
 		estadoPuntuacion = 2;
 		
+		//SE COPIAN TODOS LOS DATOS OBTENIDOS A USUARIO
 		listaUsuario.get(listaUsuario.size()-1).setAcierto(acierto);
 		listaUsuario.get(listaUsuario.size()-1).setDesacierto(desacierto);
 		listaUsuario.get(listaUsuario.size()-1).setPuntuacion(puntuacion);

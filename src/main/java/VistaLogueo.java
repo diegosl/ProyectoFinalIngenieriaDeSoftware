@@ -23,6 +23,8 @@ public class VistaLogueo implements VistaInterface
 	private JLabel etiquetaMindGame;
 	private JLabel etiquetaUsuario;
 	
+	private JLabel etiquetaYaExisteUsuario;
+	
 	public VistaLogueo(ControladorInterface controlador, ModeloInterface modelo)
 	{
 		this.controlador = controlador;
@@ -70,6 +72,14 @@ public class VistaLogueo implements VistaInterface
 		etiquetaUsuario.setFont(new Font("Calibri", Font.BOLD, 16));
 		etiquetaUsuario.setBounds(10, 54, 56, 14);
 		panelLogueo.add(etiquetaUsuario);
+		
+		//CREA ETIQUETA YA EXISTE USUARIO DE VENTANA DE LOGUEO
+		etiquetaYaExisteUsuario = new JLabel("Ya Existe Usuario!!!");
+		etiquetaYaExisteUsuario.setForeground(Color.LIGHT_GRAY);
+		etiquetaYaExisteUsuario.setFont(new Font("Calibri", Font.BOLD, 16));
+		etiquetaYaExisteUsuario.setBounds(110, 80, 130, 14);
+		panelLogueo.add(etiquetaYaExisteUsuario);
+		etiquetaYaExisteUsuario.setVisible(false);
 		
 		//CREA BOTON INICIAR DE VENTANA DE LOGUEO
 		botonIniciar = new JButton("Iniciar");
@@ -124,13 +134,19 @@ public class VistaLogueo implements VistaInterface
 				//INICIA SESION DE VENTANA DE LOGUEO
 				//NO MUESTRA VENTANA DE LOGUEO
 				marcoLogueo.setVisible(false);
+				
+				//NO MUESTRA ETIQUETA YA EXISTE USUARIO
+				etiquetaYaExisteUsuario.setVisible(false);
 				break;
 			}
 			case 2:
 			{
 				//NO INICIA SESION DE VENTANA DE LOGUEO
 				//SE TIENE QUE VOLVER A INGRESAR USUARIO
-				System.out.println("Ya existe el usuario");
+				//System.out.println("Ya existe el usuario");
+				
+				//MUESTRA ETIQUETA YA EXISTE USUARIO
+				etiquetaYaExisteUsuario.setVisible(true);
 				break;
 			}
 			case 3:

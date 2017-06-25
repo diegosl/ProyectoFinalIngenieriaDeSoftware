@@ -131,6 +131,7 @@ public class VistaPuntuacion implements VistaInterface
 				//MUESTRA VENTANA DE LOGUEO
 				marcoPuntuacion.setVisible(true);
 				
+				//MUESTRA EN LA TABLA DE PUNTUACION LOS DATOS DE CADA USUARIO
 				for(int i=0; i<modelo.getListaUsuario().size(); i++)
 				{	
 					tablaPuntuacion.setValueAt(((Usuario) modelo.getListaUsuario().get(i)).getNombre(), i, 0);
