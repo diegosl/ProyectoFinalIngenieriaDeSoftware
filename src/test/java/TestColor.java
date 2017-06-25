@@ -2,13 +2,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class TestPuntuacionUsuario 
+public class TestColor 
 {
 	@Test
 	public void test() 
 	{
 		Modelo modelo = new Modelo();
-		int puntuacion=0;
+		int color=0;
 		
 		modelo.inicioLogueo("diego");
 		modelo.secuenciaJuego("1",0);
@@ -21,6 +21,10 @@ public class TestPuntuacionUsuario
 		modelo.secuenciaJuego("8",7);
 		modelo.secuenciaJuego("9",8);
 		
+		color = modelo.getColor();
+		
+		assertEquals(color,2);
+		
 		modelo.secuenciaJuego("9",0);
 		modelo.secuenciaJuego("8",1);
 		modelo.secuenciaJuego("7",2);
@@ -32,9 +36,9 @@ public class TestPuntuacionUsuario
 		modelo.secuenciaJuego("1",8);
 		modelo.inicioJuego();
 		
-		puntuacion = ((Usuario) modelo.getListaUsuario().get(0)).getPuntuacion();
+		color = modelo.getColor();
 		
-		assertEquals(puntuacion,2);
+		assertEquals(color,1);
 	}
 
 }

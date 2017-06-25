@@ -8,12 +8,11 @@ public class TestNombreUsuario
 	public void test() 
 	{
 		Modelo modelo = new Modelo();
-		ControladorLogueo controladorLogueo = new ControladorLogueo(modelo);
 		
-		controladorLogueo.iniciarLogueo("diego");
-		controladorLogueo.iniciarLogueo("diego");
-		controladorLogueo.iniciarLogueo("diego");
-		controladorLogueo.iniciarLogueo("diego");
+		modelo.inicioLogueo("diego");
+		modelo.inicioLogueo("diego");
+		modelo.inicioLogueo("diego");
+		modelo.inicioLogueo("diego");
 		
 		for(int i=0; i<modelo.getListaUsuario().size(); i++)
 		{

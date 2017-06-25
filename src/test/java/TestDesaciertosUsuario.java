@@ -8,16 +8,14 @@ public class TestDesaciertosUsuario
 	public void test() 
 	{
 		Modelo modelo = new Modelo();
-		ControladorLogueo controladorLogueo = new ControladorLogueo(modelo);
-		ControladorJuego controladorJuego = new ControladorJuego(modelo);
 		int desaciertos=0;
 		
-		controladorLogueo.iniciarLogueo("diego");
+		modelo.inicioLogueo("diego");
 		modelo.secuenciaJuego("7",0);
 		modelo.secuenciaJuego("2",1);
 		modelo.secuenciaJuego("8",3);
 		modelo.secuenciaJuego("9",4);
-		controladorJuego.iniciarJuego();
+		modelo.inicioJuego();
 		
 		desaciertos = ((Usuario) modelo.getListaUsuario().get(0)).getDesacierto();
 		
