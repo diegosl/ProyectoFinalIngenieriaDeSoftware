@@ -14,3 +14,9 @@ Choquevilca Gustavo | ScrumSoft | Ingenieria De Software
 * [Documento De Diseño Del Sistema](https://github.com/diegosl/ProyectoFinalIngenieriaDeSoftware/blob/master/documentos/TP2/Documento%20De%20Dise%C3%B1o%20Del%20Sistema.pdf)
 * [Documento Mind Game](https://github.com/diegosl/ProyectoFinalIngenieriaDeSoftware/blob/master/documentos/TP2/Documento%20Mind%20Game.pdf)
 * [Documento Nota De Entrega](https://github.com/diegosl/ProyectoFinalIngenieriaDeSoftware/blob/master/documentos/TP2/Documento%20Nota%20De%20Entrega.pdf)
+
+### PRESENTACION:
+* [Presentacion](https://github.com/diegosl/ProyectoFinalIngenieriaDeSoftware/blob/master/material/Presentacion/PresentacionIngenieriaDeSoftware.pptx)
+
+### EJECUTABLE:
+* [MindGame](https://github.com/diegosl/ProyectoFinalIngenieriaDeSoftware/blob/master/ejecutable/MindGame.jar)
